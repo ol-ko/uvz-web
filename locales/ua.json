@@ -1,0 +1,22 @@
+{
+  "back": "Назад к \"{text}\"",
+  "servicesPrices": "Услуги и цены",
+  "otherServices": "Другие услуги",
+  "appointments": "Запись",
+  "address": "Наш адрес",
+  "parking": "Парковка",
+  "min": "мин",
+  "nav": {
+    "open": "Открыть меню сайта",
+    "close": "Закрыть меню сайта",
+    "studio": "Студия",
+    "services": "Наши услуги",
+    "contact": "Контакты"
+  },
+  "instagram": {
+    "alt": "Wonderbeauty Instagram"
+  },
+  "facebook": {
+    "alt": "Wonderbeauty Facebook группа"
+  }
+}

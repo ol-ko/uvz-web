@@ -1,7 +1,7 @@
 import postcssPresetEnv from 'postcss-preset-env'
 import postcssEasingGradients from 'postcss-easing-gradients'
 import * as SITE_INFO from './content/site/info.json'
-import { COLOR_MODE_FALLBACK } from './utils/globals.js'
+import { locales, defaultLocale, messages } from './locales';
 
 export default {
   target: 'static',
@@ -72,11 +72,18 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa'],
+  buildModules: ['@nuxtjs/svg', '@nuxtjs/pwa'],
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxt/content', 'nuxt-purgecss'],
+  modules: ['@nuxt/content', 'nuxt-purgecss', ['nuxt-i18n', {
+    locales,
+    defaultLocale,
+    vueI18n: {
+      fallbackLocale: defaultLocale,
+      messages
+    }
+  }]],
   /*
    ** Build configuration
    */
@@ -126,17 +133,6 @@ export default {
         /token/,
         /^vue-content-placeholders/
       ]
-    }
-  },
-  colorMode: {
-    classSuffix: '',
-    preference: 'system', // default value of $colorMode.preference
-    fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found
-    componentName: 'ColorScheme',
-    cookie: {
-      options: {
-        sameSite: 'lax'
-      }
     }
   },
   pwa: {

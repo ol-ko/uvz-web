@@ -1,7 +1,8 @@
 ---
-createdAt: 2021-02-18
-title: Time to add your own content
-description: Remove all of the .md-files in the /content folder and go at it!
+createdAt: 2022-03-20
+title: Sample blog post
+description: Sample blog post description goes here
+image: https://placekitten.com/600/200
 ---
 
 ## Sit liquentibus sinu verbis et spatiarer laedar
@@ -17,6 +18,8 @@ dat: voce quater attritas. Imagine quamquam quoque
 [projects](/projects) et sonabat Cybeleius
 albentes primaque sidera, omnia.
 
+![Placeholder Kitten](https://placekitten.com/800/400)
+
 ## Apud sunt
 
 Addidit nunc: finita tua celatos vacuos Morpheus tigridis videre. Et an in ne
@@ -24,26 +27,6 @@ scelus pluviaque fluitque consurgere dixit inficit est fecere atque voce perque
 fuit ulla Thestorides. Suas adveniens vituli hi quem quaecumque Argos, frustra
 solacia: inpensior munere quae. Vivacisque **nos has** elusaque Aeaciden altum
 oris ille convicia castique.
-
-```js{1,4}[posts.vue]
-formatDate(dateString) {
-  const date = new Date(dateString)
-  return date.toLocaleDateString(process.env.lang) || ''
-},
-async fetchPosts(
-    postType = this.postType,
-    amount = this.amount,
-    sortBy = this.sortBy,
-  ) {
-  return this.$content(postType)
-    .sortBy(sortBy.key, sortBy.direction)
-    .limit(amount)
-    .fetch()
-    .catch((err) => {
-      error({ statusCode: 404, message: amount > 1 ? 'Posts not found' : 'Post not found' })
-    });
-}
-```
 
 ## Est nec scrobibus Antissa
 

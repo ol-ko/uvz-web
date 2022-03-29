@@ -1,0 +1,22 @@
+{
+  "back": "Zurück zu \"{text}\"",
+  "servicesPrices": "Leistungen und Preise",
+  "otherServices": "Andere Leistungen",
+  "appointments": "Termine",
+  "address": "Unsere Addresse",
+  "parking": "Parken",
+  "min": "min",
+  "nav": {
+    "open": "Navigation öffnen",
+    "close": "Navigation schliessen",
+    "studio": "Studio",
+    "services": "Unsere Leistungen",
+    "contact": "Kontakte"
+  },
+  "instagram": {
+    "alt": "Wonderbeauty Instagram"
+  },
+  "facebook": {
+    "alt": "Wonderbeauty Facebook Gruppe"
+  }
+}
