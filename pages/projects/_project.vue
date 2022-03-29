@@ -31,7 +31,7 @@ export default {
   async asyncData({ $content, params, error, app }) {
     let post;
     try {
-      post = await $content(app.i18n.locale, 'projects', params.project).fetch();
+      post = await $content('projects', app.i18n.locale, params.project).fetch();
     } catch (e) {
       error({ message: "Project not found" });
     }

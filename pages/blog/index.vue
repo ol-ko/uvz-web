@@ -20,7 +20,7 @@ export default {
     let posts;
 
     try {
-      posts = await $content(app.i18n.locale, 'blog').fetch();
+      posts = await $content('blog', app.i18n.locale).fetch();
     } catch (e) {
       error({ message: "Blog posts not found" });
     }

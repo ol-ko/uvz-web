@@ -21,7 +21,7 @@ export default {
     let post;
 
     try {
-      post = await $content(app.i18n.locale, 'blog', params.blog).fetch();
+      post = await $content('blog', app.i18n.locale, params.blog).fetch();
     } catch (e) {
       error({ message: "Blog post not found" });
     }

@@ -15,7 +15,7 @@ export default {
     let page;
 
     try {
-      page = await $content(app.i18n.locale, 'pages', params.page).fetch();
+      page = await $content('pages', app.i18n.locale, params.page).fetch();
     } catch (e) {
       error({ message: "Page not found" });
     }
