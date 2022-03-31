@@ -4,10 +4,13 @@
       <h1>Blog</h1>
       <ul>
         <li v-for="(post) in posts">
+          <img v-if="post.image" :src='post.image' alt=''>
+          <span v-else :class='$style.placeholder'></span>
           <nuxt-link
             :to="`blog/${post.slug}`"
             class="card card--clickable"
           >{{post.title}}</nuxt-link>
+          <p>{{post.description}}</p>
         </li>
       </ul>
     </section>
@@ -28,3 +31,9 @@ export default {
   },
 }
 </script>
+
+<style module lang='scss'>
+.placeholder {
+  background: #1C263B;
+}
+</style>
