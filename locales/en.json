@@ -1,25 +1,24 @@
 {
-  "back": "Back to \"{text}\"",
-  "servicesPrices": "Services and prices",
-  "otherServices": "Other services",
-  "appointments": "Appointments",
-  "address": "Our address",
-  "parking": "Parking",
-  "min": "min",
-  "services": {
-    "nails": "Nails"
-  },
-  "nav": {
-    "open": "Open navigation",
-    "close": "Close navigation",
-    "studio": "Studio",
-    "services": "Our services",
-    "contact": "Contact us"
-  },
-  "instagram": {
-    "alt": "Wonderbeauty Instagram account"
-  },
-  "facebook": {
-    "alt": "Wonderbeauty Facebook group"
+  "mainMenu": {
+    "home": {
+      "title": "Home",
+      "link": "/pages/home"
+    },
+    "projects": {
+      "title": "Projects",
+      "link": "/projects"
+    },
+    "getInvolved": {
+      "title": "Get involved",
+      "link": "/pages/get-involved"
+    },
+    "blog": {
+      "title": "Blog",
+      "link": "/blog"
+    },
+    "contact": {
+      "title": "Contact",
+      "link": "/pages/contact"
+    }
   }
 }

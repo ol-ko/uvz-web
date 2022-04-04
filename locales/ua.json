@@ -1,22 +1,24 @@
 {
-  "back": "Назад к \"{text}\"",
-  "servicesPrices": "Услуги и цены",
-  "otherServices": "Другие услуги",
-  "appointments": "Запись",
-  "address": "Наш адрес",
-  "parking": "Парковка",
-  "min": "мин",
-  "nav": {
-    "open": "Открыть меню сайта",
-    "close": "Закрыть меню сайта",
-    "studio": "Студия",
-    "services": "Наши услуги",
-    "contact": "Контакты"
-  },
-  "instagram": {
-    "alt": "Wonderbeauty Instagram"
-  },
-  "facebook": {
-    "alt": "Wonderbeauty Facebook группа"
+  "mainMenu": {
+    "home": {
+      "title": "Головна",
+      "link": "/pages/home"
+    },
+    "projects": {
+      "title": "Проекти",
+      "link": "/projects"
+    },
+    "getInvolved": {
+      "title": "Долучитися",
+      "link": "/pages/get-involved"
+    },
+    "blog": {
+      "title": "Блог",
+      "link": "/blog"
+    },
+    "contact": {
+      "title": "Зв'язатися",
+      "link": "/pages/contact"
+    }
   }
 }

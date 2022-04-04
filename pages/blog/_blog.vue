@@ -1,21 +1,21 @@
 <template>
-  <main>
-    <section v-if="post">
-      <nav aria-label="go back">
-        <router-back />
-      </nav>
+  <section v-if="post">
+    <nav aria-label="go back">
+      <router-back>< Blog</router-back>
+    </nav>
 
-      <article>
-        <h5 v-if="post.createdAt">{{ formatDate(post.createdAt) }}</h5>
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.description }}</p>
-        <nuxt-content :document="post" />
-      </article>
-    </section>
-  </main>
+    <article>
+      <h5 :class="$style.createdAt">{{ createdAt }}</h5>
+      <h1>{{ post.title }}</h1>
+      <img v-if="post.image" :src='post.image' alt=''>
+      <nuxt-content :document="post" />
+    </article>
+  </section>
 </template>
 
 <script>
+import { formatDate } from '@/helpers/format.js'
+
 export default {
   async asyncData({ $content, params, error, app }) {
     let post;
@@ -27,11 +27,16 @@ export default {
     }
     return { post };
   },
-  methods: {
-    formatDate(dateString) {
-      const date = new Date(dateString)
-      return date.toLocaleDateString(process.env.lang) || ''
+  computed: {
+    createdAt() {
+      return formatDate(this.post.createdAt || '', this.$i18n.locale);
     }
   }
 }
 </script>
+
+<style lang="scss" module>
+.createdAt + * {
+  margin-top: 0;
+}
+</style>

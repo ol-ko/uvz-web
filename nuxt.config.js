@@ -40,11 +40,11 @@ export default {
       {
         rel: 'preload',
         as: 'style',
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap'
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap',
         media: 'print',
         onload: `this.media='all'`
       }
@@ -61,10 +61,6 @@ export default {
    ** Customize the progress-bar color
    */
   loading: { color: '#526488' },
-  /*
-   ** Global CSS
-   */
-  css: ['@/assets/css/main.pcss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -112,11 +108,6 @@ export default {
   content: {
     dir: 'content'
   },
-  tailwindcss: {
-    viewer: false, // disabled because it causes `Error: Cannot find module 'tailwindcss/resolveConfig'`, fixed in https://github.com/nuxt-community/tailwindcss-module/pull/303
-    cssPath: '~/assets/css/main.pcss',
-    exposeConfig: false // enables `import { theme } from '~tailwind.config'`
-  },
   purgeCSS: {
     mode: 'postcss',
     // ? Safelisting docs: https://purgecss.com/safelisting.html
@@ -147,5 +138,11 @@ export default {
       ogHost: process.env.URL,
       ogImage: '/preview.jpg'
     }
-  }
+  },
+  /*
+   ** Global CSS
+   */
+  css: [
+    '@/assets/css/main.scss'
+  ]
 }

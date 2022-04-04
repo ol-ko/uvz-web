@@ -1,20 +1,8 @@
 <template>
-  <main>
-    <section v-if="posts">
-      <h1>Blog</h1>
-      <ul>
-        <li v-for="(post) in posts">
-          <img v-if="post.image" :src='post.image' alt=''>
-          <span v-else :class='$style.placeholder'></span>
-          <nuxt-link
-            :to="`blog/${post.slug}`"
-            class="card card--clickable"
-          >{{post.title}}</nuxt-link>
-          <p>{{post.description}}</p>
-        </li>
-      </ul>
-    </section>
-  </main>
+  <section v-if="posts">
+    <h1>{{ $t('mainMenu.blog.title') }}</h1>
+    <PostList :posts="posts" :displayDates="true" prefix="blog"></PostList>
+  </section>
 </template>
 
 <script>
@@ -24,6 +12,7 @@ export default {
 
     try {
       posts = await $content('blog', app.i18n.locale).fetch();
+      posts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     } catch (e) {
       error({ message: "Blog posts not found" });
     }
@@ -33,7 +22,5 @@ export default {
 </script>
 
 <style module lang='scss'>
-.placeholder {
-  background: #1C263B;
-}
+
 </style>

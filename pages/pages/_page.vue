@@ -1,12 +1,10 @@
 <template>
-  <main>
-    <section v-if="page">
-      <article>
-        <h1>{{ page.title }}</h1>
-        <nuxt-content :document="page" />
-      </article>
-    </section>
-  </main>
+  <section v-if="page">
+    <article>
+      <h1>{{ page.title }}</h1>
+      <nuxt-content :document="page" />
+    </article>
+  </section>
 </template>
 
 <script>
