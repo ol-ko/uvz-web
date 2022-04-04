@@ -1,6 +1,7 @@
 <template>
   <ul :class="$style.postList">
-    <PostListItem v-for="post in posts" :post="post" :displayDates="displayDates" :prefix="prefix"></PostListItem>
+    <PostListItem v-for="post in posts" :post="post" :displayDates="displayDates" :prefix="prefix"
+                  :key="post.title"></PostListItem>
   </ul>
 </template>
 

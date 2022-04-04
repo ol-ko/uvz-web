@@ -1,7 +1,7 @@
 <template>
   <section v-if="post">
     <nav aria-label="go back">
-      <router-back>< Blog</router-back>
+      <router-back>< {{ $t('mainMenu.blog.title') }}</router-back>
     </nav>
 
     <article>

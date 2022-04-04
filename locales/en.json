@@ -2,7 +2,7 @@
   "mainMenu": {
     "home": {
       "title": "Home",
-      "link": "/pages/home"
+      "link": "/"
     },
     "projects": {
       "title": "Projects",

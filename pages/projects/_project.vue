@@ -1,7 +1,7 @@
 <template>
   <section v-if="post">
     <nav aria-label="go back">
-      <router-back />
+      <router-back>< {{ $t('mainMenu.projects.title') }}</router-back>
     </nav>
 
     <article>
@@ -9,17 +9,8 @@
           v-if="post.cover"
           :src="post.cover"
       >
-      <!-- <h6>{{ post.category }}</h6> -->
       <h1>{{ post.title }}</h1>
-      <p>{{ post.description }}</p>
       <nuxt-content :document="post" />
-      <div v-if="post.gallery">
-        <img
-            v-for="image in post.gallery"
-            :key="image.id"
-            :src="image"
-        >
-      </div>
     </article>
   </section>
 </template>

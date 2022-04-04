@@ -6,7 +6,9 @@
       <nav aria-label="Main Menu">
         <ul :class="$style.mainMenu">
           <li v-for="mainMenuItem in Object.values($i18n.messages[$i18n.locale].mainMenu)" :key="mainMenuItem.link">
-            <nuxt-link :to="localePath(mainMenuItem.link)">{{ mainMenuItem.title }}</nuxt-link>
+            <nuxt-link :to="localePath(mainMenuItem.link)" :exact-active-class="$style.mainMenuItemActive"
+                       :active-class="mainMenuItem.link !== '/' ? $style.mainMenuItemActive : ''">{{
+                mainMenuItem.title }}</nuxt-link>
           </li>
         </ul>
         <LanguageSwitch></LanguageSwitch>
@@ -84,7 +86,7 @@ header {
     font-size: 1rem;
     line-height: 1rem;
 
-    &:hover, &:active {
+    &:hover, &:active, &.mainMenuItemActive {
       background: $blue;
       color: $white;
     }
